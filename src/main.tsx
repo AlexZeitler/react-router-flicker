@@ -1,31 +1,18 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './App.css'
-import App from './App'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { Shell } from './components/shell'
+import { createRoot } from 'react-dom/client'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container)
+
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={'/'}>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route
-          path="/about"
-          element={
-            <>
-              <div className="text-center">
-                <h1 className="text-xl">About</h1>
-                <div>
-                  <Link to="/" className="text-purple-400 underline">
-                    Home
-                  </Link>
-                </div>
-              </div>
-            </>
-          }
-        />
+        <Route path="/*" element={<Shell />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )
