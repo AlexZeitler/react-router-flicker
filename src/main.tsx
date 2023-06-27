@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename={'/'}>
       <Routes>
-        <Route path="/*" element={<Shell />} />
+        <Route path="/" element={<Shell />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
