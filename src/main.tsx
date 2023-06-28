@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Shell } from './components/shell'
 import { createRoot } from 'react-dom/client'
 
@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename={'/'}>
       <Routes>
-        <Route path="/" element={<Shell />} />
+        <Route path="/*" element={<Shell />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

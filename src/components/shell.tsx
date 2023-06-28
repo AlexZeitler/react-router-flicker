@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu } from './menu'
+import { Route, Routes } from 'react-router-dom'
 
 export const Shell = () => {
   return (
@@ -53,7 +54,11 @@ export const Shell = () => {
           </div>
 
           <div className="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-            {/*Main area */}
+            <Routes>
+              <Route path={'/'} element={<div>Dashboard</div>}></Route>
+              <Route path={'/team'} element={<div>Team</div>}></Route>
+              <Route path={'/projects'} element={<div>Projects</div>}></Route>
+            </Routes>
           </div>
         </div>
 
